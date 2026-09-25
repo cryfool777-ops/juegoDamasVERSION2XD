@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damas — Proyecto de Estructura de Datos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Damas</h1>
+    <p>Proyecto individual — Estructura de Datos · Tablero 8×8 · Dos jugadores</p>
+  </header>
+
+  <div class="layout">
+    <div class="board-wrap">
+      <div id="board" role="grid" aria-label="Tablero de damas"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Partida</h2>
+
+      <div class="timers">
+        <div class="timer-box" id="timer-box-light">
+          <span class="lbl">Claras</span><span class="val" id="timer-light">2:00</span>
+        </div>
+        <div class="timer-box" id="timer-box-dark">
+          <span class="lbl">Rojas</span><span class="val" id="timer-dark">2:00</span>
+        </div>
+      </div>
+
+      <div class="turn-row">
+        <span>Turno:</span>
+        <span class="turn-dot" id="turn-dot"></span>
+        <span id="turn-label">Claras</span>
+      </div>
+
+      <div class="score-row"><span>Fichas claras</span><span id="count-light">12</span></div>
+      <div class="score-row"><span>Fichas rojas</span><span id="count-dark">12</span></div>
+
+      <div id="status-msg">Comienzan las fichas claras. Selecciona una ficha para ver sus movimientos.</div>
+
+      <div class="buttons">
+        <button id="restart-btn">Reiniciar</button>
+        <button id="draw-btn" class="secondary">Terminar por acuerdo</button>
+        <button id="save-btn">Guardar partida</button>
+      </div>
+
+      <div class="rules-toggle" id="rules-toggle">Ver reglas del juego</div>
+      <div id="rules-box">
+        <ul>
+          <li>Tablero 8×8, dos jugadores.</li>
+          <li>Comienza el jugador de fichas claras.</li>
+          <li>Las fichas normales se mueven en diagonal, solo hacia delante.</li>
+          <li>Es obligatorio comer si existe la posibilidad de hacerlo.</li>
+          <li>Si tras comer se puede seguir comiendo con la misma ficha, es obligatorio continuar.</li>
+          <li>Al llegar a la última fila del rival, la ficha corona como Dama.</li>
+          <li>La Dama se mueve y come en diagonal hacia delante y hacia atrás.</li>
+          <li>El juego termina cuando un jugador se queda sin fichas, queda sin movimientos posibles, o ambos acuerdan terminar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="history-section">
+    <h2>Historial de partidas guardadas</h2>
+    <div id="history-list"></div>
+  </div>
+
+  <footer>
+   Romel Alejandro Quiroa Zepeda. 2026.
+  </footer>
+
+  <script src="js/damas.js"></script>
+</body>
+</html>
